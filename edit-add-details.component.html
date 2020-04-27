@@ -1,0 +1,31 @@
+<h5>Input car details here</h5>
+
+<div class="container">
+
+  <form (ngSubmit)="saveDetails()">
+
+    <fieldset class="form-group"><label>TravelDate</label>
+    <input type="date" [ngModel]="edit_addDetailsDriver.date | date : 'yyyy-MM-dd' "  (ngModelChange)="edit_addDetailsDriver.date = $event"   class="form-control" name="TravelDate" required="required"></fieldset>
+
+    <fieldset class="form-group"><label>CarModel</label>
+    <input type="text" [(ngModel)]="edit_addDetailsDriver.carModel" class="form-control"  name="carModel" required="required"></fieldset>
+      
+    <fieldset class="form-group"><label>Source</label>
+    <input type="text"  [(ngModel)]="edit_addDetailsDriver.source" class="form-control" name="source" required="required"></fieldset>
+
+
+    <fieldset class="form-group"><label>Destination</label>
+    <input type="text"  [(ngModel)]="edit_addDetailsDriver.destination" class="form-control" name="Destination" required="required"></fieldset>
+    
+    <fieldset class="form-group"><label>Cost/km(in rupees)</label>
+    <input type="number" [(ngModel)]="edit_addDetailsDriver.cost" class="form-control" name ="cost/km" required="required"></fieldset>
+
+
+    <fieldset class="form-group"><label>Seats</label>
+    <input type="number"  [(ngModel)]="edit_addDetailsDriver.seats"  class="form-control" name="seats" required="required">
+    
+  <button type = "submit" class="btn btn-success" >save it</button></fieldset>
+  </form>
+
+</div>
+

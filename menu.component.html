@@ -1,0 +1,26 @@
+<header>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+<div style=color:aliceblue><a href="https://www.vcarride.com" class="navbar-brand"></a>
+
+
+    VcarRide Application
+</div>
+<ul class="navbar-nav">
+    <a *ngIf="hardcodedAuthenticationService.isUserLoggedInfunc()" routerLink="/welcome/agilesh" class="nav-link">Home</a>
+    <a  *ngIf="hardcodedAuthenticationService.isUserLoggedInfunc()" routerLink="/driver-details" class="nav-link">Drive</a>
+    <a  *ngIf="hardcodedAuthenticationService.isUserLoggedInfunc()" routerLink="/rider-details" class="nav-link">Ride</a>
+    
+</ul>
+
+<ul class="navbar-nav navbar-collapse justify-content-end">
+    <a *ngIf="!hardcodedAuthenticationService.isUserLoggedInfunc()" routerLink="/login" class="nav-link">Login</a>
+    <a *ngIf="hardcodedAuthenticationService.isUserLoggedInfunc()" routerLink="/logout" class="nav-link">Logout</a>
+   
+    
+</ul>
+
+
+</nav>
+
+</header>

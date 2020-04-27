@@ -1,0 +1,18 @@
+.col
+{
+    background-color: bisque;
+}
+
+.h3
+{
+    text-align: center;
+    
+}
+
+.h4
+{
+    position: relative;
+    text-decoration: dashed;
+    text-align: left;
+     color: black;
+}  

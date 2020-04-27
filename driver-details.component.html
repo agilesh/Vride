@@ -1,0 +1,38 @@
+<h1>Driver's Details</h1>
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="container">
+<table class="table">
+    
+    <thead>
+        <tr>
+            
+           <th>Travel date</th>
+           <th>carModel</th>
+           <th>source</th>
+           <th>Destination</th>
+           <th>cost</th>
+           <th>seats</th>
+           <th>update</th>
+           <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of drivers">
+          <td>{{d.date | date}}</td> 
+           <td>{{d.carModel}}</td>
+           <td>{{d.source}}</td>
+           <td>{{d.destination}}</td>
+           <td>{{d.cost}}</td>
+           <td>{{d.seats}}</td>
+           <td><button (click)="uptdriversDetails(d.id)" class="btn btn-success">Update detail</button></td>
+           <td><button (click)="deldriversDetails(d.id)" class="btn btn-warning">Delete detail</button></td>
+         
+        </tr>
+    </tbody>
+   
+</table>
+<div class="row">
+    <button (click)="adddriversDetails()" class="btn btn-success">Add detail</button>
+</div>
+
+</div>

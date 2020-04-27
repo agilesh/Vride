@@ -1,0 +1,34 @@
+<h1>Rider's Details</h1>
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="container">
+<table class="table">
+    
+    <thead>
+        <tr>
+            
+           
+           <th>source</th>
+           <th>via</th>
+           <th>destination</th>
+           <th>Date</th>
+           <th>update</th>
+           <th>Delete</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rider of riders">
+           <td>{{rider.source}}</td>
+           <td>{{rider.via}}</td>
+           <td>{{rider.destination}}</td>
+           <td>{{rider.date | date}}</td>
+           <td><button (click)="udtRidersDetails(rider.id)" class= "btn btn-success">Update detail</button>
+           <td><button (click)="delRidersDetails(rider.id)" class= "btn btn-warning">Delete detail</button>
+        </tr>
+    </tbody>
+
+</table>
+<div class="row">
+    <button (click)="addRidersDetails()" class= "btn btn-success">Add detail</button>
+</div>
+</div>

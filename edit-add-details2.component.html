@@ -1,0 +1,21 @@
+<div class="container">
+<h3>input your details here</h3>
+   <fieldset class="form-group">
+       <label>Source</label>
+    <input type = "text" [(ngModel)]="rider.source"  class="form-control" name="source" required="required"></fieldset>
+
+    <fieldset class="form-group">
+ <label>via</label>
+      <input type = "text" [(ngModel)]="rider.via"  class="form-control"  name="via" required="required"></fieldset>
+
+      <fieldset class="form-group">
+  <label>destination</label>
+    <input type = "text" [(ngModel)]="rider.destination" class="form-control"  name="destination" required="required"></fieldset>
+
+    <fieldset class="form-group"> 
+ <label>Travel date</label>
+      <input type = "date"  [ngModel]="rider.date | date: 'yyyy-MM-dd' " (ngModelChange)="rider.date = $event" class="form-control" name="Travel date" required="required"></fieldset>
+
+
+      <button class="btn btn-success" (click)="saveRidersDetails()">Save</button>
+</div>
